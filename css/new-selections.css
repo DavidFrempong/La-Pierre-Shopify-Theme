@@ -1,0 +1,535 @@
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p, span{
+    color: #1D0F03;
+}
+
+/* Sale link */
+
+.sale-link{
+width: 100%;
+height: 74px;
+background: #B03939;
+cursor: pointer;
+}
+
+.sale-link a{
+    color: #FFFFFF;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 74px;   
+}
+
+.sale-link a b{
+    font-weight: 900;
+    margin: 0px 5px;
+}
+
+
+/* Filter box selected-mobile */
+
+.filter-selected-mobile{
+    display: none;
+}
+
+/* Filter box selected-mobile */
+
+
+
+/* Main page content */
+
+.page-content{
+    padding-top: 90px;
+}
+
+/* Title and breadcrumb */
+
+.title{
+    padding-left: 70px;
+    width: 70%;
+}
+
+.title h1{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.title h4{
+ font-style: normal;
+font-weight: bold;
+font-size: 1.4rem;
+margin-bottom: 1rem;
+}
+
+.page-breadcrumb a{
+    color: #4960AF;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.page-breadcrumb a:hover{
+    text-decoration: underline;
+}
+
+
+/* Main image and categories */
+
+.main-image-and-categories{
+    display: flex;
+    margin-bottom: 12rem;
+}
+
+
+/* Categories (left side) */
+
+.categories{
+    position: relative;
+    top: 100px;
+    padding-left: 20px;
+    width: 30%;
+}
+
+.categories-container{
+    background: #F9F9F9;
+}
+
+/* Categories mobile */
+
+.categories-mobile{
+    display: none;
+}
+
+
+/* Main image container (right side) */
+
+.main-image-container{
+    position: relative;
+    top: 2.6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.main-image-and-description{
+    position: relative;
+    top: 3.2rem;
+    width: 50%;
+}
+
+.main-image{
+    width: 100%;
+}
+
+.main-image img{
+    width: 200%;
+}
+
+.main-image-description{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Multiple image wrapper */
+
+.horizontal-image-wrapper{
+    width: 100%;
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.image-popular-information{
+    display: flex;
+    width: 100%;
+}
+
+.image-information{
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.image-container{
+padding: 10px;
+}
+
+
+/* Middle Section Large Image */
+
+.middle-section-image{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.section-image-and-description{
+    width: 100%;
+}
+
+.middle-section-image img{
+    width: 50%;
+}
+
+.section-image-description{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/* Color */
+
+.color-filler{
+
+}
+
+.color-filter{
+    display: flex;
+}
+
+.circle{
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+.circle.black{
+    background: #000000;
+}
+
+.circle.blue{
+    background: #0026ff;
+}
+
+.circle.brown{
+    background: #532c00;
+}
+
+.circle.tan{
+    background: #f8b677;
+}
+
+.circle.grey{
+    background: #a5a5a5;
+}
+
+.circle.dark-red{
+    background: #721e1e;
+}
+
+
+
+
+@media only screen and (max-width: 1100px){
+
+    .title{
+      margin-bottom: 4.5rem;
+    }
+    
+    .main-image-and-categories{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-image-container{
+        top: 5rem;
+    }
+
+    .horizontal-image-wrapper{
+        grid-template-columns: auto auto;
+    }
+
+    .middle-section-image img{
+        width: 85%;
+    }
+
+    .categories{
+        display: none;
+    }
+
+    .categories-mobile{
+        display: block;
+    }
+
+    .categories-container-group-titles{
+        display: none;
+    }
+
+    .categories-container-group-titles-filter-title{
+        display: none;
+    }
+
+    .categories-container-group-mobile{
+        
+    }
+
+    .categories-container-group-titles-mobile{
+        display: none;
+    }
+
+    .categories-container-filter-button{
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    /* Filter categories mobile start*/
+
+
+   /* .categories-mobile-filter{
+        justify-content: center;
+        margin: 0 auto;
+        background: #dfdfdf;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 6;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        visibility: hidden;
+    } */
+
+    .filter-selected-mobile{
+        display: block;
+    }
+    
+    .categories-mobile-filter-visible{
+        visibility: visible;
+    }
+
+    .filter-selected-mobile-visible{
+        visibility: visible;
+    }
+
+    .categories-mobile-filter{
+       position: relative;
+       top: 20%;
+       cursor: pointer;
+    }
+
+    .categories-mobile-titles.option{
+        margin-bottom: 3rem;
+    }
+
+    .titles{
+        justify-content: center;
+        margin: 0 auto;
+        background: #dfdfdf;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 6;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        display: none;
+        top: 0rem;
+    }
+
+    .categories-mobile-filter.titles-visible{
+        display: block;
+    }
+
+    .categories-mobile-filter.titles-visible-hidden{
+        visibility: hidden;
+    }
+
+    .categories-mobile-titles.option.selected-category{
+        display: none;
+    }
+
+    .x-mark{
+        position: absolute;
+        right: 40px;
+        top: 15px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .x-mark svg{
+        width: 15px;
+        height: 15px;
+    }
+
+    .back-arrow{
+        position: absolute;
+        left: 15px;
+        top: 10px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .back-arrow-visible{
+        display: block;
+    }
+
+        .back-arrow svg{
+        width: 25px;
+        height: 25px;
+        transform: rotate(180deg);
+    }
+
+    .clear-mobile-product-filters{
+        position: absolute;
+        right: 27px;
+        top: 60px;
+        cursor: pointer;
+        z-index: 10;
+        opacity: 0.4;
+    }
+
+    .clear-mobile-product-filters-clicked{
+        opacity: 1;
+    }
+    
+    
+    .categories-mobile-filter-group.sort-by{
+        z-index: 7;
+        display: none;
+    }
+
+    .categories-mobile-filter-group.sort-by-visible{
+        display: block;
+    }
+
+    .categories-mobile-filter-group.category{
+        z-index: 7;
+        display: none;
+    }
+
+    .categories-mobile-filter-group.category-visible{
+        display: block;
+    }
+
+    .categories-mobile-filter-group.fit{
+        z-index: 7;
+        display: none;
+    }
+
+    .categories-mobile-filter-group.fit-visible{
+        display: block;
+    }
+
+    .categories-mobile-filter-group.brand{
+        z-index: 7;
+        display: none;
+    }
+
+    .categories-mobile-filter-group.brand-visible{
+        display: block;
+    }
+
+    .categories-mobile-filter-group.price-range{
+        z-index: 7;
+        display: none;
+    }
+
+    .categories-mobile-filter-group.price-range-visible{
+        display: block;
+    }
+
+    .categories-mobile-filter-group.color{
+        z-index: 7;
+        display: none;
+    }
+
+    .color-filter{
+        cursor: pointer;
+    }
+
+    .color-filter-clicked{
+        font-weight: 700;
+        font-size: 17px;
+        background: #e0e0e0;
+    }
+
+    .categories-mobile-filter-group.color-visible{
+        display: block;
+    } */
+
+    .categories-mobile-filter-option-hidden{
+        display: none;
+    }
+
+    .categories-mobile-filter-group{
+        justify-content: center;
+        margin: 0 auto;
+        background: #ff0000;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 12;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        top: 0rem;
+        display: none;
+    }
+
+        .categories-mobile-filter-group-visible{
+         display: block;
+    }
+
+    .selected{
+        cursor: pointer;
+    }
+
+.visible{
+    font-weight: 700;
+}
+
+
+
+
+    
+    /* Filter categories mobile end */
+
+
+
+    .color-selections-mobile{
+        display: none;
+    }
+
+
+
+    /* Price Range Mobile Start */
+
+    .price-range-mobile-section{
+        display: none;
+    }
+
+    /* Price Range Mobile End */
+
+
+
+    /* Filter Button Mobile Start */
+
+    .categories-container-filter-button span{
+        background-color: #dfdfdf;
+        width: 14rem;
+        height: 3rem;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        font-weight: 700;
+        font-size: 1.1rem;
+        cursor: pointer;
+        line-height: 3rem;
+    }
+
+    .categories-container-filter-button span:hover{
+        background-color: #d1d1d1;
+    }
+
+    /* Filter Button Mobile End */
+}
