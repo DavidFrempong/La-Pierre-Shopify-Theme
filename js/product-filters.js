@@ -52,6 +52,7 @@ window.onload = function () {
     // Close filter menus
     closefiltercategories_one.addEventListener('click', function () {
         filtertitles.classList.remove('titles-visible')
+       // filtertitles.classList.add('titles-visible-fadeout')
         console.log('filter')
     })
 
@@ -138,10 +139,12 @@ window.onload = function () {
 
     document.querySelectorAll('.clear-mobile-product-filters').forEach(clearselections =>
         clearselections.addEventListener('click', () => {
-        clearselections.classList.remove('clear-mobile-product-filters-clicked');
-            categoryitemselected.forEach(x => x.classList.remove("visible"))
-         } )
-        )
+            clearselections.classList.remove('clear-mobile-product-filters-clicked');
+            categoryitemselected.forEach(x => x.classList.remove("visible"),
+                colorselected.forEach(x => x.classList.remove('color-filter-clicked'))
+                )
+        })
+    )
 
     console.log(clearselections)
 
