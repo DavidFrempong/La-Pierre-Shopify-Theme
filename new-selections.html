@@ -61,7 +61,9 @@
                 <div class="clear-mobile-product-filters">Clear</div>
 
                 <div class="categories-mobile-filter-group sort-by">
-                    <span>Sort By</span>
+                    <div class="category-mobile-title">
+                        <p>Sort By</p>
+                    </div>
                     <div class="filters-mobile sort-by">
                         <p class="selected">Our Favorites</p>
                         <p class="selected">What's New</p>
@@ -71,7 +73,9 @@
                 </div>
 
                 <div class="categories-mobile-filter-group category">
-                    <span>Category</span>
+                    <div class="category-mobile-title">
+                        <p>Category</p>
+                    </div>
                     <div class="filters-mobile category">
                         <p class="selected">All Types</p>
                         <p class="selected">Suits</p>
@@ -82,7 +86,9 @@
                 </div>
 
                 <div class="categories-mobile-filter-group fit">
-                    <span>Fit</span>
+                    <div class="category-mobile-title">
+                        <p>Fit</p>
+                    </div>
                     <div class="filters-mobile fit">
                         <p class="selected">Modern Fit</p>
                         <p class="selected">Classic Fit</p>
@@ -92,7 +98,9 @@
                 </div>
 
                 <div class="categories-mobile-filter-group brand">
-                    <span>Brand</span>
+                    <div class="category-mobile-title">
+                        <p>Brand</p>
+                    </div>
                     <div class="filters-mobile brand">
                         <p class="selected">Gioppi</p>
                         <p class="selected">Zapati</p>
@@ -107,11 +115,15 @@
                 <div class="categories-mobile-filter-group price-range">
                     <div class="price-range">
                         <div class="price-range-indicator">
-                            <label for="price-range">Price Range:</label>
-                            <input type="range" min="0" max="750" value="0" class="slider" id="myRange">
+                            <div class="price-range-slider">
+                                <div class="category-mobile-title">
+                                    <p>Price Range</p>
+                                </div>
+                                <input type="range" min="0" max="750" value="0" class="slider" id="myRange">
+                            </div>
                             <div class="range-numbers">
-                                <span>$0</span>
-                                <span>$750</span>
+                                <span class="price-slider left">$0</span>
+                                <span class="price-slider right">$750</span>
                             </div>
                         </div>
                         <div class="price-range-indicator-clear">Clear</div>
@@ -120,7 +132,9 @@
 
                 <div class="categories-mobile-filter-group color">
                     <div class="color-filler">
-                        <label for="color">Color:</label>
+                        <div class="category-mobile-title">
+                            <p>Color</p>
+                        </div>
                         <div class="color-filter black">
                             <div class="circle black"></div>
                             <span>Black</span>
@@ -146,6 +160,10 @@
                             <span>Dark Red</span>
                         </div>
                     </div>
+                </div>
+
+                <div class="filter-button-go-to-results">
+                    Save
                 </div>
             </div>
 

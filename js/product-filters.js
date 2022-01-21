@@ -34,6 +34,8 @@ window.onload = function () {
     colorbutton = document.getElementsByClassName('categories-mobile-titles', 'option', 'color')[6]
     colorcategories = document.getElementsByClassName('categories-mobile-filter-group', 'color')[6]
 
+    backtomainpage = document.getElementsByClassName('filter-button-go-to-results')[0]
+
     console.log
 
 
@@ -146,7 +148,22 @@ window.onload = function () {
         })
     )
 
-    console.log(clearselections)
+    backtomainpage = document.getElementsByClassName('filter-button-go-to-results')[0];
+
+
+    function showresults() {
+        selecteditem = document.querySelectorAll('.selected');
+        document.createTextNode(selecteditem);
+        selecteditem.appendChild(textnode);
+        console.log(selecteditem)
+    }
+    showresults()
+
+     //Go back to main filter page and log what user clicked
+      backtomainpage.addEventListener('click', function(){
+        allfilteroptions.classList.remove('categories-mobile-filter-group-visible');
+      })
+
 
 
 
