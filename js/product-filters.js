@@ -11,10 +11,8 @@ window.onload = function () {
         closefiltercategories_two = document.getElementsByClassName('x-mark')[1],
         filtertitles = document.getElementsByClassName('categories-mobile-filter', 'titles')[0],
         goback = document.getElementsByClassName('back-arrow')[0],
-        //   filteroptions = document.querySelector('.categories-mobile-filter-option'),
         allfilteroptions = document.getElementsByClassName('categories-mobile-filter-group')[0]
-    //  mobilecategories = document.getElementsByClassName('categories-mobile-filter')[0]
-    //    console.log(closefiltercategories_two)
+
 
     sortbybutton = document.getElementsByClassName('categories-mobile-titles', 'option', 'sort-by')[0],
         sortbycategories = document.getElementsByClassName('categories-mobile-filter-group', 'sort-by')[1],
@@ -36,7 +34,8 @@ window.onload = function () {
 
     backtomainpage = document.getElementsByClassName('filter-button-go-to-results')[0]
 
-    console.log
+    body = document.getElementsByClassName('body-content')[0]
+    console.log(body)
 
 
     filterclosed = false;
@@ -45,6 +44,7 @@ window.onload = function () {
     function showfilter() {
         filterbuttonmobile.addEventListener('click', function () {
             filtertitles.classList.add('categories-mobile-filter', 'titles-visible')
+            document.body.style.overflowY = "hidden";
             console.log('test')
         })
     }
@@ -54,12 +54,13 @@ window.onload = function () {
     // Close filter menus
     closefiltercategories_one.addEventListener('click', function () {
         filtertitles.classList.remove('titles-visible')
-       // filtertitles.classList.add('titles-visible-fadeout')
+        document.body.style.overflowY = "visible";
         console.log('filter')
     })
 
     closefiltercategories_two.addEventListener('click', function () {
         allfilteroptions.classList.remove('categories-mobile-filter-group-visible')
+        document.body.style.overflowY = "visible";
     })
 
 
@@ -144,28 +145,23 @@ window.onload = function () {
             clearselections.classList.remove('clear-mobile-product-filters-clicked');
             categoryitemselected.forEach(x => x.classList.remove("visible"),
                 colorselected.forEach(x => x.classList.remove('color-filter-clicked'))
-                )
+            )
         })
     )
 
     backtomainpage = document.getElementsByClassName('filter-button-go-to-results')[0];
 
-
-    function showresults() {
-        selecteditem = document.querySelectorAll('.selected');
-        document.createTextNode(selecteditem);
-        selecteditem.appendChild(textnode);
-        console.log(selecteditem)
-    }
-    showresults()
-
-     //Go back to main filter page and log what user clicked
-      backtomainpage.addEventListener('click', function(){
-        allfilteroptions.classList.remove('categories-mobile-filter-group-visible');
-      })
+ 
 
 
+//Go back to main filter page and log what user clicked
+backtomainpage.addEventListener('click', function () {
+    allfilteroptions.classList.remove('categories-mobile-filter-group-visible');
+   // showresults();
+})
 
+
+//showresults();
 
 
     // Work on removing all filter options and returning to main filter page

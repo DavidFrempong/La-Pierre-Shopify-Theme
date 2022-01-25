@@ -337,11 +337,11 @@ padding: 10px;
         margin: 0 auto;
         background: #dfdfdf;
         position: fixed;
-        width: 100%;
+        left: 15%;
+        width: 85%;
         height: 100vh;
         z-index: 6;
         display: flex;
-        justify-content: center;
         overflow: hidden;
         display: none;
         top: 0rem;
@@ -370,7 +370,7 @@ padding: 10px;
 
     @keyframes fadein {
         from { opacity: 0;
-            transform: translate3d(100vw,0,0);
+            transform: translate3d(300px,0,0);
             }
 
         to   { opacity: 1;
@@ -573,7 +573,8 @@ padding: 10px;
         margin: 0 auto;
         background: #dfdfdf;
         position: fixed;
-        width: 100%;
+        left: 15%;
+        width: 85%;
         height: 100vh;
         z-index: 12;
         display: flex;
@@ -581,7 +582,7 @@ padding: 10px;
         overflow: hidden;
         top: 0rem;
         display: none;
-        animation-name: fadeup;
+        animation-name: fadein;
         animation-duration: 0.7s;
         text-align: center;
     }
@@ -633,6 +634,12 @@ padding: 10px;
     /* Price Range Mobile End */
 
 
+    /* Save Filter Selections */
+
+    
+
+
+
 
     /* Filter Button Mobile Start */
 
@@ -655,3 +662,14 @@ padding: 10px;
 
     /* Filter Button Mobile End */
 }
+
+/* User selected filters Start */
+
+.active-facet{
+    text-decoration: none;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 2px 12px;
+    font-size: 0.75rem;
+}
+
