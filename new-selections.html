@@ -11,6 +11,7 @@
     </style>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/new-selections.css">
+    <link rel="stylesheet" href="css/category-filter.css">
 
 </head>
 
@@ -29,6 +30,7 @@
                     </svg>
                 </div>
                 <div class="filter-titles">
+                    <div class="categories-mobile-titles-heading">Product Filters</div>
                     <div class="categories-mobile-titles option sort-by">Sort by</div>
                     <div class="categories-mobile-titles option selected-category">What's New</div>
                     <div class="categories-mobile-titles option category">Category</div>
@@ -62,19 +64,21 @@
 
                 <div class="categories-mobile-filter-group sort-by">
                     <div class="category-mobile-title">
-                        <p>Sort By</p>
+                        <span>Sort By</span>
                     </div>
                     <div class="filters-mobile sort-by">
                         <p class="selected">Our Favorites</p>
-                        <p class="selected">What's New</p>
+                        <p class="selected">Date, Old to New</p>
+                        <p class="selected">Date, New to Old</p>
                         <p class="selected">Price: Low to High</p>
                         <p class="selected">Price: High to Low</p>
+                        <p class="selected">Alphabetically, A-Z</p>
                     </div>
                 </div>
 
                 <div class="categories-mobile-filter-group category">
                     <div class="category-mobile-title">
-                        <p>Category</p>
+                        <span>Category</span>
                     </div>
                     <div class="filters-mobile category">
                         <p class="selected">All Types</p>
@@ -87,7 +91,7 @@
 
                 <div class="categories-mobile-filter-group fit">
                     <div class="category-mobile-title">
-                        <p>Fit</p>
+                        <span>Fit</span>
                     </div>
                     <div class="filters-mobile fit">
                         <p class="selected">Modern Fit</p>
@@ -99,7 +103,7 @@
 
                 <div class="categories-mobile-filter-group brand">
                     <div class="category-mobile-title">
-                        <p>Brand</p>
+                        <span>Brand</span>
                     </div>
                     <div class="filters-mobile brand">
                         <p class="selected">Gioppi</p>
@@ -117,53 +121,58 @@
                         <div class="price-range-indicator">
                             <div class="price-range-slider">
                                 <div class="category-mobile-title">
-                                    <p>Price Range</p>
+                                    <span>Price Range</span>
                                 </div>
-                                <input type="range" min="0" max="750" value="0" class="slider" id="myRange">
+                                <div class="price-range-fields">
+                                    <div class="fields">
+                                        <input type="text" value="" placeholder="From:">
+                                        <label value="0">$0</label>
+                                    </div>
+                                    <div class="fields">
+                                        <input type="text" value="" placeholder="To:">
+                                        <label value="650">$650</label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="range-numbers">
-                                <span class="price-slider left">$0</span>
-                                <span class="price-slider right">$750</span>
-                            </div>
+                            <!--   <div class="price-range-indicator-clear">Clear</div> -->
                         </div>
-                        <div class="price-range-indicator-clear">Clear</div>
                     </div>
                 </div>
 
                 <div class="categories-mobile-filter-group color">
+                    <div class="category-mobile-title">
+                        <span>Color</span>
+                    </div>
                     <div class="color-filler">
-                        <div class="category-mobile-title">
-                            <p>Color</p>
-                        </div>
-                        <div class="color-filter black">
-                            <div class="circle black"></div>
+                        <div class="color-filter mobile black">
+                            <div class="circle mobile black"></div>
                             <span>Black</span>
                         </div>
-                        <div class="color-filter blue">
-                            <div class="circle blue"></div>
+                        <div class="color-filter mobile blue">
+                            <div class="circle mobile blue"></div>
                             <span>Blue</span>
                         </div>
-                        <div class="color-filter brown">
-                            <div class="circle brown"></div>
+                        <div class="color-filter mobile brown">
+                            <div class="circle mobile brown"></div>
                             <span>Brown</span>
                         </div>
-                        <div class="color-filter tan">
-                            <div class="circle tan"></div>
+                        <div class="color-filter mobile tan">
+                            <div class="circle mobile tan"></div>
                             <span>Tan</span>
                         </div>
-                        <div class="color-filter grey">
-                            <div class="circle grey"></div>
+                        <div class="color-filter mobile grey">
+                            <div class="circle mobile grey"></div>
                             <span>Grey</span>
                         </div>
-                        <div class="color-filter dark-red">
-                            <div class="circle dark-red"></div>
+                        <div class="color-filter mobile dark-red">
+                            <div class="circle mobile dark-red"></div>
                             <span>Dark Red</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="filter-button-go-to-results">
-                    Save
+                    <span>Save</span>
                 </div>
             </div>
 
@@ -194,12 +203,6 @@
             </div>
 
 
-            <!--Filter Button Mobile-->
-
-            <div class="categories-container-filter-button">
-                <span>Filter</span>
-            </div>
-
             <!--User selected filters-->
 
             <div class="user-selected-filters">
@@ -213,10 +216,21 @@
             <div class="main-image-and-categories">
 
 
-                <!--Categories (left side)-->
+                <!--Filter button-->
+
+                <div class="categories-container-filter-button">
+                    <span>Filter:</span>
+                </div>
+
+                <!--Categories Filter (left side)-->
                 <div class="categories">
 
                     <div class="categories-container">
+
+                        <div class="categories-container-filter-heading-desktop">
+                            <span>Filter:</span>
+                        </div>
+
 
                         <!--Sort By-->
 
@@ -224,9 +238,11 @@
                             <label for="sort-by">Sort by:</label>
                             <select name="sort" id="sort">
                                 <option value="featured">Our Favorites</option>
-                                <option value="what's new">What's New</option>
+                                <option value="what's new">Date, Old to New</option>
+                                <option value="what's new">Date, New to Old</option>
                                 <option value="price low to high">Price: Low to High</option>
                                 <option value="price high to low">Price: High to Low</option>
+                                <option value="price high to low">Alphabetically, A-Z</option>
                             </select>
                         </form>
 
@@ -275,47 +291,43 @@
 
                         <!--Price Range-->
 
-                        <div class="price-range">
-                            <div class="price-range-indicator">
-                                <label for="price-range">Price Range:</label>
-                                <input type="range" min="0" max="750" value="0" class="slider" id="myRange">
-                                <div class="range-numbers">
-                                    <span>$0</span>
-                                    <span>$750</span>
+                        <form class="price-range">
+                            <div class="price-range">
+                                <div class="price-range-indicator">
+                                    <div class="price-range-slider">
+                                        <label class="category-mobile-title">
+                                            <span>Price Range:</span>
+                                        </label>
+                                        <div class="price-range-fields desktop">
+                                            <div class="fields">
+                                                <input type="text" value="" placeholder="From:">
+                                                <label value="0">$0</label>
+                                            </div>
+                                            <div class="fields">
+                                                <input type="text" value="" placeholder="To:">
+                                                <label value="650">$650</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--   <div class="price-range-indicator-clear">Clear</div> -->
                                 </div>
                             </div>
-                            <div class="price-range-indicator-clear">Clear</div>
-                        </div>
+                        </form>
 
                         <!--Color-->
 
-                        <div class="color-filer">
+                        <form class="color-filer">
                             <label for="color">Color:</label>
-                            <div class="color black">
-                                <div class="circle black"></div>
-                                <span>Black</span>
-                            </div>
-                            <div class="color blue">
-                                <div class="circle blue"></div>
-                                <span>Blue</span>
-                            </div>
-                            <div class="color brown">
-                                <div class="circle brown"></div>
-                                <span>Brown</span>
-                            </div>
-                            <div class="color tan">
-                                <div class="circle tan"></div>
-                                <span>Tan</span>
-                            </div>
-                            <div class="color grey">
-                                <div class="circle grey"></div>
-                                <span>Grey</span>
-                            </div>
-                            <div class="color dark-red">
-                                <div class="circle dark-red"></div>
-                                <span>Dark Red</span>
-                            </div>
-                        </div>
+                            <select name="color" id="color">
+                                <option value="allcolors">All Colors</option>
+                                <option value="black">Black</option>
+                                <option value="blue">Blue</option>
+                                <option value="brown">Brown</option>
+                                <option value="tan">Tan</option>
+                                <option value="grey">Grey</option>
+                                <option value="dark-red">Dark Red</option>
+                            </select>
+                        </form>
 
                     </div>
 

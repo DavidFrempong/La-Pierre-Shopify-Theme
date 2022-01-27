@@ -35,7 +35,7 @@ window.onload = function () {
     backtomainpage = document.getElementsByClassName('filter-button-go-to-results')[0]
 
     body = document.getElementsByClassName('body-content')[0]
-    console.log(body)
+    console.log(colorcategories)
 
 
     filterclosed = false;
@@ -63,21 +63,25 @@ window.onload = function () {
         document.body.style.overflowY = "visible";
     })
 
-
+   var shown = false;
 
     // Various filter sections
 
     sortbybutton.addEventListener('click', function () {
+     //   if (shown ===false){
         console.log('testy')
         allfilteroptions.classList.add('categories-mobile-filter-group-visible')
         sortbycategories.classList.add('sort-by-visible')
         filtertitles.classList.remove('titles-visible')
+     //   } shown = true;
     })
 
     categorybutton.addEventListener('click', function () {
+      //  if (shown ===true){
         allfilteroptions.classList.add('categories-mobile-filter-group-visible')
         category_categories.classList.add('category-visible')
         filtertitles.classList.remove('titles-visible')
+       // } shown = false;
     })
 
     fitbutton.addEventListener('click', function () {
@@ -163,6 +167,8 @@ backtomainpage.addEventListener('click', function () {
 
 //showresults();
 
-
-    // Work on removing all filter options and returning to main filter page
+     //To do: 
+    // Create Product Filters
+    // Remove all filter options and return to main filter page
+    // Show what user has selected on main page
 }
