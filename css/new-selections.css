@@ -8,6 +8,10 @@ h1, h2, h3, h4, h5, h6, p, span, select{
     color: #1D0F03;
 }
 
+a{
+    text-decoration: none;
+}
+
 /* Sale link */
 
 .sale-link{
@@ -76,16 +80,13 @@ margin-bottom: 1rem;
     margin-bottom: 12rem;
 }
 
-
-
-
 /* Main image container (right side) */
 
 .main-image-container{
     position: relative;
-    top: 2.6rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    top: 1.6rem;
+    left: 10%;
+    padding: 1rem;
 }
 
 .main-image-and-description{
@@ -105,6 +106,27 @@ margin-bottom: 1rem;
 .main-image-description{
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: 20px;
+}
+
+.main-image-description span{
+    margin-bottom: 0.2rem;
+}
+
+.large-image-title{
+    font-weight: 700;
+}
+
+.image-price{
+    font-weight: 800;
+}
+
+/* Amount of items on page */
+
+.amount-on-page{
+    font-size: 0.9rem;
+    font-weight: 300;
 }
 
 /* Multiple image wrapper */
@@ -119,6 +141,8 @@ margin-bottom: 1rem;
 .image-popular-information{
     display: flex;
     width: 100%;
+    position: relative;
+    top: 15px;
 }
 
 .image-information{
@@ -129,6 +153,30 @@ margin-bottom: 1rem;
 
 .image-container{
 padding: 10px;
+position: relative;
+margin-bottom: 30px;
+}
+
+.image-title{
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.image-popular-information.right-side{
+position: relative;
+width: 71px;
+height: 17px;
+padding: 0.2rem 1.1rem;
+background: #B03939;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+
+.image-popular-information.right-side span{
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.8rem;
 }
 
 
@@ -154,4 +202,25 @@ padding: 10px;
     flex-direction: column;
 }
 
-
+@media only screen and (max-width: 775px){
+    .title{
+        margin-bottom: 4.5rem;
+      }
+      
+      .main-image-and-categories{
+          display: flex;
+          flex-direction: column;
+      }
+  
+      .main-image-container{
+          top: 5rem;
+      }
+  
+      .horizontal-image-wrapper{
+          grid-template-columns: auto auto;
+      }
+  
+      .middle-section-image img{
+          width: 85%;
+      }
+}

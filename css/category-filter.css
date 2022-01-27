@@ -5,6 +5,7 @@ cursor: pointer;
 }
 
 
+
 /* Filter button mobile */
 .categories-container-filter-button{
 display: none;
@@ -23,12 +24,12 @@ display: none;
     position: relative;
     top: 110px;
     padding-left: 20px;
-    width: 30%;
+    width: 20%;
 }
 
 .categories-container{
     background: #f7f7f7;
-    height: 600px;
+    height: 450px;
     padding: 1.4rem;
 }
 
@@ -55,12 +56,19 @@ display: none;
     font-size: 0.9rem;
 }
 
+.price-range-fields.desktop{
+    display: flex;
+    position: relative;
+    top: 0.5rem;
+}
 
+.fields.desktop input{
+width: 45%;
+}
 
-
-
-
-
+.fields.desktop label{
+    font-size: 0.7rem;
+}
 
 
 /* (Everything regarding the MOBILE filters below!!) Categories filter: MOBILE */
@@ -122,28 +130,7 @@ display: none;
     background: #721e1e;
 }
 
-@media only screen and (max-width: 1100px){
-
-    .title{
-      margin-bottom: 4.5rem;
-    }
-    
-    .main-image-and-categories{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .main-image-container{
-        top: 5rem;
-    }
-
-    .horizontal-image-wrapper{
-        grid-template-columns: auto auto;
-    }
-
-    .middle-section-image img{
-        width: 85%;
-    }
+@media only screen and (max-width: 775px){
 
     .categories{
         display: none;
@@ -161,9 +148,6 @@ display: none;
         display: none;
     }
 
-    .categories-container-group-mobile{
-        
-    }
 
     .categories-container-group-titles-mobile{
         display: none;
