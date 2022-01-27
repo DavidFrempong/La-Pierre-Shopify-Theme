@@ -12,6 +12,8 @@ a{
     text-decoration: none;
 }
 
+
+
 /* Sale link */
 
 .sale-link{
@@ -96,11 +98,11 @@ margin-bottom: 1rem;
 }
 
 .main-image{
-    width: 100%;
+    width: 500px;
 }
 
 .main-image img{
-    width: 200%;
+    width: 100%;
 }
 
 .main-image-description{
@@ -145,6 +147,10 @@ margin-bottom: 1rem;
     top: 15px;
 }
 
+.image img{
+    width: 100%;
+}
+
 .image-information{
     display: flex;
     flex-direction: column;
@@ -164,6 +170,7 @@ margin-bottom: 30px;
 
 .image-popular-information.right-side{
 position: relative;
+top: 0px;
 width: 71px;
 height: 17px;
 padding: 0.2rem 1.1rem;
@@ -186,10 +193,15 @@ align-items: center;
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    margin: 40px 0px;
 }
 
 .section-image-and-description{
     width: 100%;
+}
+
+.section-image-and-description span{
+    margin-bottom: 0.2rem;
 }
 
 .middle-section-image img{
@@ -202,9 +214,11 @@ align-items: center;
     flex-direction: column;
 }
 
+
 @media only screen and (max-width: 775px){
     .title{
         margin-bottom: 4.5rem;
+        padding-left: 20px;
       }
       
       .main-image-and-categories{
@@ -214,6 +228,7 @@ align-items: center;
   
       .main-image-container{
           top: 5rem;
+          left: 0;
       }
   
       .horizontal-image-wrapper{
@@ -223,4 +238,51 @@ align-items: center;
       .middle-section-image img{
           width: 85%;
       }
+
+      .middle-section-image{
+        margin: 30px 0px;
+    }
+
+    .main-image{
+        width: 90vw;
+    }
+
+    .sale-link{
+        width: 100%;
+        height: 74px;
+        background: #B03939;
+        cursor: pointer;
+        }
+        
+        .sale-link a{
+            font-size: 80%;
+            overflow-wrap: break-word; 
+}
+
+.image img{
+    width: 70%;
+}
+
+.image-popular-information{
+    display: flex;
+    flex-direction: column;
+}
+
+.image-information{
+    margin-bottom: 1rem;
+}
+
+.horizontal-image-wrapper{
+    position: relative;
+    left: 10%;
+}
+
+.main-image-description{
+    justify-content: center;
+    text-align: center;
+    width: 50vw;
+    align-items: center;
+    left: 50%;
+}
+    
 }
