@@ -35,7 +35,9 @@ window.onload = function () {
     backtomainpage = document.getElementsByClassName('filter-button-go-to-results')[0]
 
     body = document.getElementsByClassName('body-content')[0]
-    console.log(colorcategories)
+
+    bodyfilter = document.getElementsByClassName('black-filter')[0]
+    console.log(bodyfilter)
 
 
     filterclosed = false;
@@ -45,6 +47,8 @@ window.onload = function () {
         filterbuttonmobile.addEventListener('click', function () {
             filtertitles.classList.add('categories-mobile-filter', 'titles-visible')
             document.body.style.overflowY = "hidden";
+            bodyfilter.style.backgroundColor = "black";
+            bodyfilter.style.filter = "brightness(20%)";
             console.log('test')
         })
     }
@@ -56,32 +60,36 @@ window.onload = function () {
         filtertitles.classList.remove('titles-visible')
         document.body.style.overflowY = "visible";
         console.log('filter')
+        bodyfilter.style.backgroundColor = "white";
+        bodyfilter.style.filter = "brightness(100%)";
     })
 
     closefiltercategories_two.addEventListener('click', function () {
         allfilteroptions.classList.remove('categories-mobile-filter-group-visible')
         document.body.style.overflowY = "visible";
+        bodyfilter.style.backgroundColor = "white";
+        bodyfilter.style.filter = "brightness(100%)";
     })
 
-   var shown = false;
+    var shown = false;
 
     // Various filter sections
 
     sortbybutton.addEventListener('click', function () {
-     //   if (shown ===false){
+        //   if (shown ===false){
         console.log('testy')
         allfilteroptions.classList.add('categories-mobile-filter-group-visible')
         sortbycategories.classList.add('sort-by-visible')
         filtertitles.classList.remove('titles-visible')
-     //   } shown = true;
+        //   } shown = true;
     })
 
     categorybutton.addEventListener('click', function () {
-      //  if (shown ===true){
+        //  if (shown ===true){
         allfilteroptions.classList.add('categories-mobile-filter-group-visible')
         category_categories.classList.add('category-visible')
         filtertitles.classList.remove('titles-visible')
-       // } shown = false;
+        // } shown = false;
     })
 
     fitbutton.addEventListener('click', function () {
@@ -155,19 +163,19 @@ window.onload = function () {
 
     backtomainpage = document.getElementsByClassName('filter-button-go-to-results')[0];
 
- 
 
 
-//Go back to main filter page and log what user clicked
-backtomainpage.addEventListener('click', function () {
-    allfilteroptions.classList.remove('categories-mobile-filter-group-visible');
-   // showresults();
-})
+
+    //Go back to main filter page and log what user clicked
+    backtomainpage.addEventListener('click', function () {
+        allfilteroptions.classList.remove('categories-mobile-filter-group-visible');
+        // showresults();
+    })
 
 
-//showresults();
+    //showresults();
 
-     //To do: 
+    //To do: 
     // Create Product Filters
     // Remove all filter options and return to main filter page
     // Show what user has selected on main page
