@@ -169,6 +169,8 @@ window.onload = function () {
     //Go back to main filter page and log what user clicked
     backtomainpage.addEventListener('click', function () {
         allfilteroptions.classList.remove('categories-mobile-filter-group-visible');
+        bodyfilter.style.backgroundColor = "white";
+            bodyfilter.style.filter = "brightness(100%)";
         // showresults();
     })
 
